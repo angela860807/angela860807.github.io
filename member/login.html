@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 강원도 관광</title>
+    <link rel="icon" type="image/png" href="../images/common/favicon3.png">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../font.css">
+    <style>
+        body { background-color: #f0f0f0; min-height: 100vh; }
+        .wrap { min-height: 100vh; display: flex; flex-direction: column; }
+        #hd {
+            position: relative !important;
+            background: linear-gradient(135deg, rgba(137,25,155,0.9) 0%, rgba(160,17,71,0.9) 50%, rgba(179,9,1,0.9) 100%) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+        }
+        .content { flex: 1; display: flex; align-items: center; justify-content: center; padding: 120px 20px 80px; }
+        .form_wrap { width: 100%; max-width: 500px; position: relative; }
+        .login_card { background-color: #fff; border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 80px 50px 50px; position: relative; margin-top: 50px; }
+        .lock_icon { width: 100px; height: 100px; background: linear-gradient(135deg,#89199b 0%,#a01147 50%,#b30901 100%); border-radius: 50%; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(137,25,155,0.4); font-size: 40px; }
+        .sec_tit { font-size: 32px; font-weight: 700; color: #333; margin-bottom: 40px; text-align: center; }
+        .form1 { width: 100%; }
+        .txt_ctrl { display: block; width: 100%; line-height: 56px; margin-bottom: 16px; padding: 0 20px; border: 2px solid #e0e0e0; border-radius: 12px; font-size: 16px; transition: all 0.3s; background-color: #fafafa; }
+        .txt_ctrl:focus { outline: none; border-color: #6366f1; background-color: #fff; box-shadow: 0 0 0 4px rgba(99,102,241,0.1); }
+        .btn_con { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+        .btn_ctrl { display: block; width: 100%; border-radius: 12px; line-height: 56px; text-align: center; border: none; outline: none; cursor: pointer; font-weight: 600; font-size: 16px; transition: all 0.3s; text-decoration: none; }
+        .btn_ctrl.login { background: linear-gradient(135deg,#89199b 0%,#a01147 50%,#b30901 100%); color: #fff; box-shadow: 0 4px 16px rgba(137,25,155,0.3); }
+        .btn_ctrl.login:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(137,25,155,0.4); }
+        .btn_ctrl.join { background: #fff; color: #89199b; border: 2px solid #89199b; }
+        .btn_ctrl.join:hover { background: linear-gradient(135deg,#89199b 0%,#a01147 50%,#b30901 100%); color: #fff; border-color: transparent; }
+        .error-msg { color: #e53e3e; font-size: 14px; margin-bottom: 10px; text-align: center; }
+        .success-msg { color: #38a169; font-size: 14px; margin-bottom: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header id="hd">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/common/logo2.png" alt="강원도관광로고"/>
+            </a>
+            <input type="checkbox" id="ck1" class="ck_item"/>
+            <div id="smart">
+                <label class="smart_wrap" for="ck1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <nav class="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="../sub/sub11.html" class="dp1">알아가기</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub11.html">이야기속강원</a></li>
+                            <li><a href="../sub/sub12.html">테마여행</a></li>
+                            <li><a href="../sub/sub13.html">관광안내소</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../sub/sub21.html" class="dp1">즐길거리</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub21.html">축제·행사</a></li>
+                            <li><a href="../sub/sub22.html">레저·체험</a></li>
+                            <li><a href="../sub/sub23.html">K-한류</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../sub/sub31.html" class="dp1">먹거리</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub31.html">음식</a></li>
+                            <li><a href="https://gwdmall.kr/" target="_blank">쇼핑</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../sub/sub41.html" class="dp1">볼거리</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub41.html">자연</a></li>
+                            <li><a href="../sub/sub42.html">문화·역사</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../notice/list.html" class="dp1">알림소식</a>
+                        <ul class="sub">
+                            <li><a href="../notice/list.html">알림소식</a></li>
+                            <li><a href="../sub/sub52.html">관광불편신고</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="tnb">
+                <a href="login.html" class="tnb-btn">로그인</a>
+                <a href="terms.html" class="tnb-btn">회원가입</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="form_wrap">
+            <div class="login_card">
+                <div class="lock_icon">🔒</div>
+                <h3 class="sec_tit">회원 로그인</h3>
+                <form action="#" method="post" class="form1">
+                    <input type="text" name="userId" class="txt_ctrl" placeholder="아이디" required autofocus/>
+                    <input type="password" name="password" class="txt_ctrl" placeholder="비밀번호" required/>
+                    <div class="btn_con">
+                        <button type="submit" class="btn_ctrl login">로그인</button>
+                        <a href="terms.html" class="btn_ctrl join">회원가입</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="ft">
+        <img src="../images/common/footer.jpg" alt="푸터 이미지" class="ft_img"/>
+        <div class="container ft_wrap">
+            <div class="ft_logo">
+                <img src="../images/common/flogo1.png" alt="푸터 로고1"/>
+            </div>
+            <div class="ft_text">
+                <nav id="fnb">
+                    <a href="https://state.gwd.go.kr/portal/services/privacy" target="_blank">개인정보처리방침</a>
+                    <a href="https://state.gwd.go.kr/portal/services/videoInformation" target="_blank">영상정보처리기기관리방침</a>
+                    <a href="https://state.gwd.go.kr/portal/services/copyright" target="_blank">저작권보호</a>
+                </nav>
+                <div class="copyright">
+                    <p class="addr">(24266) 강원특별자치도 춘천시 중앙로 1 (봉의동)</p>
+                    <p class="copy">ⓒ Gangwon State   All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="ft_logo">
+                <img src="../images/common/flogo2.png" alt="푸터 로고2"/>
+            </div>
+            <div class="ft_right">
+                <nav id="relation">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="sel" id="ra14" class="logic-check"/>
+                            <label for="ra14" class="btn-open">패밀리사이트</label>
+                            <div class="sel" id="sel4">
+                                <ul class="view-list">
+                                    <li><a href="https://state.gwd.go.kr/" target="_blank">강원특별자치도청</a></li>
+                                    <li><a href="http://www.gwto.or.kr/" target="_blank">강원관광재단</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

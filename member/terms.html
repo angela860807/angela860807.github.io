@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>약관동의 - 강원도 관광</title>
+    <link rel="icon" type="image/png" href="../images/common/favicon3.png">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../font.css">
+    <style>
+        body { background-color: #f0f0f0; min-height: 100vh; }
+        .wrap { min-height: 100vh; display: flex; flex-direction: column; }
+        #hd { position: relative !important; background: linear-gradient(135deg,rgba(137,25,155,0.9) 0%,rgba(160,17,71,0.9) 50%,rgba(179,9,1,0.9) 100%) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important; }
+        .content { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 80px 20px 60px; }
+        .form_wrap { width: 100%; max-width: 900px; position: relative; }
+        .agree_card { background-color: #fff; border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 80px 60px 50px; position: relative; margin-top: 50px; }
+        .document_icon { width: 100px; height: 100px; background: linear-gradient(135deg,#89199B 0%,#a01147 50%,#b30901 100%); border-radius: 50%; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(137,25,155,0.4); font-size: 40px; }
+        .sec_tit { font-size: 32px; font-weight: 700; color: #333; margin-bottom: 40px; text-align: center; }
+        .terms_section { margin-bottom: 24px; }
+        .cate_tit { font-size: 20px; font-weight: 700; color: #333; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #89199B; }
+        .form_con { background-color: #fafafa; border: 2px solid #e0e0e0; border-radius: 12px; padding: 24px; height: 200px; overflow-y: auto; margin-bottom: 16px; line-height: 1.8; color: #555; font-size: 15px; }
+        .check_group { display: flex; align-items: center; padding: 16px 20px; background-color: #f8f9fa; border-radius: 12px; margin-bottom: 24px; }
+        .agree_ck { width: 24px; height: 24px; margin-right: 12px; cursor: pointer; accent-color: #89199B; }
+        .check_group label { font-size: 16px; font-weight: 600; color: #333; cursor: pointer; }
+        .btn_con { display: flex; gap: 12px; margin-top: 30px; }
+        .btn_ctrl { flex: 1; border-radius: 12px; line-height: 56px; text-align: center; border: none; outline: none; cursor: pointer; font-weight: 600; font-size: 16px; transition: all 0.3s; text-decoration: none; display: block; }
+        .btn_ctrl.next { background: linear-gradient(135deg,#89199B 0%,#a01147 50%,#b30901 100%); color: #fff; box-shadow: 0 4px 16px rgba(137,25,155,0.3); }
+        .btn_ctrl.next:hover { transform: translateY(-2px); }
+        .btn_ctrl.cancel { background: #fff; color: #666; border: 2px solid #ddd; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header id="hd">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/common/logo2.png" alt="강원도관광로고"/>
+            </a>
+            <input type="checkbox" id="ck1" class="ck_item"/>
+            <div id="smart">
+                <label class="smart_wrap" for="ck1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <nav class="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="../sub/sub11.html" class="dp1">알아가기</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub11.html">이야기속강원</a></li>
+                            <li><a href="../sub/sub12.html">테마여행</a></li>
+                            <li><a href="../sub/sub13.html">관광안내소</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../sub/sub21.html" class="dp1">즐길거리</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub21.html">축제·행사</a></li>
+                            <li><a href="../sub/sub22.html">레저·체험</a></li>
+                            <li><a href="../sub/sub23.html">K-한류</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../sub/sub31.html" class="dp1">먹거리</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub31.html">음식</a></li>
+                            <li><a href="https://gwdmall.kr/" target="_blank">쇼핑</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../sub/sub41.html" class="dp1">볼거리</a>
+                        <ul class="sub">
+                            <li><a href="../sub/sub41.html">자연</a></li>
+                            <li><a href="../sub/sub42.html">문화·역사</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../notice/list.html" class="dp1">알림소식</a>
+                        <ul class="sub">
+                            <li><a href="../notice/list.html">알림소식</a></li>
+                            <li><a href="../sub/sub52.html">관광불편신고</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="tnb">
+                <a href="login.html" class="tnb-btn">로그인</a>
+                <a href="terms.html" class="tnb-btn">회원가입</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="form_wrap">
+            <div class="agree_card">
+                <div class="document_icon">📄</div>
+                <h3 class="sec_tit">회원가입 약관 동의</h3>
+                <form id="agree_form">
+                    <div class="terms_section">
+                        <h4 class="cate_tit">제1조 회원 약관</h4>
+                        <div class="form_con">
+                            <p>본 약관은 강원도 관광 웹사이트가 제공하는 모든 서비스의 이용조건 및 절차, 회원과 사이트의 권리, 의무 및 책임사항을 규정합니다.<br><br>
+                            회원가입은 신청자가 본 약관의 내용에 대하여 동의를 한 다음 회원가입신청을 하고 사이트가 이러한 신청에 대하여 승낙함으로써 체결됩니다.<br><br>
+                            회원은 회원가입 시 등록한 사항에 변경이 있는 경우, 즉시 사이트에 그 변경사항을 알려야 합니다.</p>
+                        </div>
+                        <div class="check_group">
+                            <input type="checkbox" id="agree_ck1" class="agree_ck">
+                            <label for="agree_ck1">회원 약관에 동의합니다</label>
+                        </div>
+                    </div>
+                    <div class="terms_section">
+                        <h4 class="cate_tit">제2조 개인정보 처리방침</h4>
+                        <div class="form_con">
+                            <p>강원도 관광 웹사이트는 회원 가입 및 관리, 관광정보 서비스 제공을 목적으로 개인정보를 처리합니다.<br><br>
+                            수집하는 개인정보 항목: 아이디, 비밀번호, 이름, 이메일, 휴대전화번호<br><br>
+                            개인정보는 회원 탈퇴 시까지 보유하며, 목적 달성 후 즉시 파기합니다.</p>
+                        </div>
+                        <div class="check_group">
+                            <input type="checkbox" id="agree_ck2" class="agree_ck">
+                            <label for="agree_ck2">개인정보 처리방침에 동의합니다</label>
+                        </div>
+                    </div>
+                    <div class="btn_con">
+                        <a href="login.html" class="btn_ctrl cancel">취소</a>
+                        <a href="#" id="nextBtn" class="btn_ctrl next">다음 단계</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="ft">
+        <img src="../images/common/footer.jpg" alt="푸터 이미지" class="ft_img"/>
+        <div class="container ft_wrap">
+            <div class="ft_logo">
+                <img src="../images/common/flogo1.png" alt="푸터 로고1"/>
+            </div>
+            <div class="ft_text">
+                <nav id="fnb">
+                    <a href="https://state.gwd.go.kr/portal/services/privacy" target="_blank">개인정보처리방침</a>
+                    <a href="https://state.gwd.go.kr/portal/services/videoInformation" target="_blank">영상정보처리기기관리방침</a>
+                    <a href="https://state.gwd.go.kr/portal/services/copyright" target="_blank">저작권보호</a>
+                </nav>
+                <div class="copyright">
+                    <p class="addr">(24266) 강원특별자치도 춘천시 중앙로 1 (봉의동)</p>
+                    <p class="copy">ⓒ Gangwon State   All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="ft_logo">
+                <img src="../images/common/flogo2.png" alt="푸터 로고2"/>
+            </div>
+            <div class="ft_right">
+                <nav id="relation">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="sel" id="ra14" class="logic-check"/>
+                            <label for="ra14" class="btn-open">패밀리사이트</label>
+                            <div class="sel" id="sel4">
+                                <ul class="view-list">
+                                    <li><a href="https://state.gwd.go.kr/" target="_blank">강원특별자치도청</a></li>
+                                    <li><a href="http://www.gwto.or.kr/" target="_blank">강원관광재단</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+document.getElementById('nextBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    if (!document.getElementById('agree_ck1').checked || !document.getElementById('agree_ck2').checked) {
+        alert('모든 약관에 동의해주세요.');
+        return;
+    }
+    location.href = 'register.html';
+});
+</script>
+</body>
+</html>
